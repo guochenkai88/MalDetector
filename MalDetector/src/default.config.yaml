@@ -1,0 +1,58 @@
+base:
+    debug: false
+    # 0 ERROR锛� INFO锛� DEBUG
+    verbose: 1
+    #task id
+    tid:
+    #璋冨害閫氳�绔�彛
+    monitor:
+    #绾跨▼姹犲ぇ灏�    threads: 1
+    #妫�祴妯″紡
+    mode: "deep"
+target:
+    apk:
+    apk_path:
+
+process:
+    #璇锋眰瓒呮椂锛屽崟浣嶄负绉�    timeout: 60
+    result_path: ""
+    pms_result_path: ""
+    jad: false
+    dex2jar: false
+    apktool_path: "E:\\experiment\\experiment3\\apktool\\"
+    dex2jar_path: "/home/work/apkscan/dex2jar"
+    jad_path: "/home/work/apkscan/jad"
+    android_sdk_path: "/home/work/apkscan/android-sdk-linux"
+    nfs_path: "D:\\apkresults\\"
+
+plugins:
+    #Andorid缁勪欢瀹夊叏
+    broadcast_receiver:
+        enable: False
+    service:
+        enable: False
+    content_provider:
+        enable: False
+    activities:
+        enable: False
+
+log:
+    level: "INFO"
+    #formatter: detail/verbose/simple
+    formatter: "simple"
+    #handlers: console,file,syslog
+    handlers: "console,file"
+    log_file: "apkscan.log"
+    log_file_max_bytes: 1024*1024*20
+    log_file_backup_count: 5
+    sys_log_address: !!python/tuple ['10.216.33.66',514]
+    
+storage:
+    #ftp,nfs
+    path: ""
+    ftp_host: "yx-testing-ssl01.yx01.baidu.com"
+    ftp_port: 21
+    ftp_user: "ftpadmin"
+    ftp_passwd: "ftppass123"
+    api_url: ""
+    
